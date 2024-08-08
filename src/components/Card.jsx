@@ -1,12 +1,16 @@
-function Card({ src }) {
+function Card({ src, id, name, handleCardClick }) {
   return (
-    <div className="cardContainer">
+    <div
+      id={id}
+      name={name}
+      className="cardContainer"
+      onClick={() => handleCardClick(id)}
+    >
       <div className="side front">
         <img src={src} />
-
-        <div className="side back">
-          <img src="images/back.png" />
-        </div>
+      </div>
+      <div className="side back">
+        <img src="images/back.png" />
       </div>
     </div>
   );

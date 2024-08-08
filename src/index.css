@@ -17,7 +17,7 @@ body{
      perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 20rem;
+    height: 15rem;
 }
 
 .cardContainer .side {
@@ -25,33 +25,33 @@ body{
     flex-direction: column;
     align-items:center;
     justify-content: center;
-    height:20rem;
+    height:15rem;
     background-color: rgb(122, 58, 134); 
-    transition: all .5s;
+    transition: all .8s ease;
     position: absolute;
     top:0;
     left:0;
-    width: 100%;
+    width: 80%;
     backface-visibility: hidden;
 }
 
-.cardContainer .back{
-    transform: rotate(180deg);
+.cardContainer .front{
+    transform: rotateY(180deg);
     
 }
 
-.cardContainer .front:hover{
+.cardContainer:hover .back{
     transform: rotateY(180deg);
 }
 
-.cardContainer .back:hover{
+.cardContainer:hover .front{
     transform: rotateY(0);
 }
 
 img{
     margin-top:1rem;
-    width:20rem;
-    height: 20rem;
+    width:10rem;
+    height: 10rem;
     margin-bottom: 1rem;
 }
 
