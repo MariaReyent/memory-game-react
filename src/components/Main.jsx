@@ -1,11 +1,14 @@
-import { data } from "../data";
 import Card from "./Card";
 
-function Main({ handleCardClick }) {
+function Main({ handleCardClick, shuffleCards, win, endGame, newGame }) {
   return (
     <>
+      <div className="rulesContainer">
+        <h1 className="rules"> Don't click on the same card twice!</h1>
+      </div>
+
       <div className="cardGrid">
-        {data.map((pokemon, i) => {
+        {shuffleCards.map((pokemon, i) => {
           return (
             <Card
               key={i}
@@ -15,6 +18,18 @@ function Main({ handleCardClick }) {
           );
         })}
       </div>
+      {endGame && (
+        <div className="modal">
+          {win ? (
+            <h1 className="winHeader">YOU WIN!</h1>
+          ) : (
+            <h1 className="winHeader">You lose</h1>
+          )}
+          <button className="restartBtn" onClick={() => newGame()}>
+            Restart
+          </button>
+        </div>
+      )}
     </>
   );
 }

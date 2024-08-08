@@ -9,7 +9,8 @@ body{
     grid-template-columns: repeat(2, 500px);
     grid-column-gap:5px;
     justify-content: center;
-    margin-top:5rem;
+    margin-top:2rem;
+    margin-bottom: 2rem;
     gap:30px;
 }
 
@@ -18,6 +19,7 @@ body{
     -moz-perspective: 150rem;
     position: relative;
     height: 15rem;
+    margin-bottom: 10px;
 }
 
 .cardContainer .side {
@@ -77,7 +79,7 @@ img{
     border-radius:  15px 50px 30px;
     box-shadow: 0 0 0 rgba(255,255,255, 0.9);
     animation: pulse 2s infinite;
-    color:rgb(49, 101, 114);
+    color:rgb(119, 60, 164);
 }
 
 
@@ -107,3 +109,48 @@ img{
     box-shadow: 0 0 0 0 rgba(255,255,255, 0);
     }
     }
+
+    .modal{
+        display: flex;
+        position: fixed;
+        align-items:center;
+        justify-content: center;
+        flex-direction: column;
+        z-index:1;
+        width:100%;
+        height: 100%;
+        overflow: auto;
+        background-color:rgba(46, 39, 46, 0.557);
+        top:0;
+        left:0;
+}
+
+.modal .winHeader{
+     display: flex;
+     color:rgb(245, 235, 246);
+     font-size: 100px;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+.restartBtn{
+   height: 50px;
+   width: 180px;
+   font-size: xx-large;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   border-radius:100px;
+   border:none;
+   box-shadow: 10px 5px 10px #d79bd5;
+   color:rgb(102, 27, 95);
+}
+
+.rulesContainer{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.rules{
+    color:rgb(250, 249, 252);
+    -webkit-text-stroke:1px #62105f;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

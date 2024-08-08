@@ -19,5 +19,14 @@ export const data = [
     name: "Pokemon 4",
     src: "images/i4.png",
   },
- 
+  {
+    id: 5,
+    name: "Pokemon 5",
+    src: "images/5.jpg",
+  },
+  {
+    id: 6,
+    name: "Pokemon 6",
+    src: "images/6.jpg",
+  },
 ];
