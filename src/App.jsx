@@ -17,6 +17,7 @@ function App() {
         return [...prev, id];
       } else {
         console.log("You lose!");
+
         setEndgame(true);
         setWin(false);
         return prev;
@@ -36,8 +37,7 @@ function App() {
   };
 
   const checkWin = () => {
-    if (clickedId.length == shuffleCards.length - 1) {
-      console.log("You win");
+    if (clickedId.length === shuffleCards.length - 1) {
       setWin(true);
       setEndgame(true);
     }
@@ -48,6 +48,8 @@ function App() {
     setWin(false);
     setEndgame(false);
   };
+
+  console.log(clickedId);
 
   return (
     <>

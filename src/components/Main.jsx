@@ -8,12 +8,13 @@ function Main({ handleCardClick, shuffleCards, win, endGame, newGame }) {
       </div>
 
       <div className="cardGrid">
-        {shuffleCards.map((pokemon, i) => {
+        {shuffleCards.map((pokemon) => {
           return (
             <Card
-              key={i}
+              key={pokemon.id}
               src={pokemon.src}
-              handleCardClick={() => handleCardClick(i)}
+              handleCardClick={() => handleCardClick(pokemon.id)}
+            
             />
           );
         })}
